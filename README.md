@@ -1,38 +1,31 @@
-<mark>Template for your README. Remove all unused parts and instructions</mark>
+# Lab work 1: Bash scripts
+Authors (team): Viktor Povazhuk<br>
+Variant: 2
 
-# Lab work <mark>NUMBER</mark>: <mark>SHORT TOPIC</mark>
-Authors (team): <mark>AUTHORS WITH GITHUB LINKS</mark><br>
-Variant: <mark>VARIANT SHOULD BE HERE</mark>
 ## Prerequisites
 
-<mark>LIST LIBRARIES/TOOLS/OTHER UTILITIES THAT NEED TO BE INSTALLED (E.G. GCC, OPENMP, CMAKE ETC)</mark>
-
-### Compilation
-
-<mark>HOW TO COMPILE YOUR PROGRAM? (RECOMMENDED: ./comile.sh)</mark>
-
-### Installation
-
-<mark>DESCRIBE THE INSTALLATION PROCESS (USE ./dependencies FOLDER)</mark>
+Necessary tools:
+* tar
+* gzip
 
 ### Usage
 
-<mark>PROVIDE AN EXAMPLE OF HOW TO RUN YOUR PROGRAM (IT CAN BE A COMMAND LINE WITH INPUT AND EXPECTED OUTPUT)</mark>
+```
+$ ./arch.sh -t ./d -n 3 -r 2>> errors
+```
+
+For detailed description of options run:
+```
+$ ./arch.sh -h
+```
 
 ### Important!
 
-<mark>WHAT ELSE SHOULD WE KNOW ABOUT YOUR WORK? (E.G. KNOWN ISSUES, BUGS, SPECIAL BEHAVIOR ETC)</mark>
+Used tools: tar - to create archive, gzip - to compress.
 
 ### Results
 
-<mark>DESCRIBE THE RESULTS OF THE WORK YOU DID. WHAT DID YOU LEARN OR FIND INTERESTING?</mark>
-
-# Additional tasks
-<mark>IF APPLICABLE, LIST ALL THE EXTRA FEATURES YOU ADDED. PROVIDE DETAILS<mark>
-
-# ATTENTION!
-  
-Additional tasks not listed in the previous paragraph would not be graded.
-
-Be sure to provide a complete list of authors.
+Learned:
+* syntax of bash scripts
+* how to use tools: tar, gzip, getopts
 

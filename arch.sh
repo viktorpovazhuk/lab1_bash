@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# options for debug
-# set -o xtrace
-set -o errexit
-
 # global variables
 DIR=.
 NUM_DAYS=1
@@ -83,17 +79,14 @@ then
 else
     archive_name="${DIR}/${DIR##*/}-${archive_name}";
 fi
-echo "${archive_name}"
 
 # add to archive
 now=$(date +%s)
 min_diff=$((${NUM_DAYS}*(3600*24)))
-echo "min_diff: ${min_diff} s"
 for f_path in ${DIR}/*
 do
     f_time=$(date -r ${f_path} +%s)
     diff=$((${now}-${f_time}))
-    echo "${f_path}: ${diff} s"
     if [ -f ${f_path} -a ${diff} -gt ${min_diff} ]
     then
         ${ARCHIVER} -r -f ${archive_name} -C ${DIR} ${f_path##*/}
